@@ -1,0 +1,66 @@
+:root {
+            --light-blue: #00a6fb;
+            --medium-blue: #0582ca;
+            --dark-blue: #006494;
+            --darker-blue: #003554;
+            --darkest: #051923;
+          }
+          
+          * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+          }
+          
+          body {
+            background: var(--darkest);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+          }
+          
+          .game-container {
+            text-align: center;
+          }
+          
+          h1 {
+            margin-bottom: 20px;
+            color: var(--light-blue);
+            font-size: 2rem;
+          }
+          
+          .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 15px;
+            max-width: 400px;
+            margin: auto;
+          }
+          
+          .card {
+            background: var(--medium-blue);
+            height: 80px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            color: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+          }
+          
+          .card.flipped {
+            background: var(--light-blue);
+            color: #fff;
+          }
+          
+          .card.matched {
+            background: var(--dark-blue);
+            cursor: default;
+          }
+          
